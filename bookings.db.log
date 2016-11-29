@@ -1,0 +1,10 @@
+/*C11*/SET SCHEMA PUBLIC
+drop table hotel_booking if exists
+create table hotel_booking (id bigint not null, hotel_name varchar(255), number_of_night integer not null, price_per_night double not null, primary key (id))
+create sequence hibernate_sequence start with 1
+INSERT INTO HOTEL_BOOKING VALUES(10,'divan',3,150.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(11,'polat',2,170.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(12,'akg\u00fcn',6,120.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(13,'r\u00f6nesans',4,145.0E0)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 2
+COMMIT
